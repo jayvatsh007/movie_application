@@ -8,7 +8,7 @@ import {
   ActivityIndicator,
 } from 'react-native';
 
-const API_KEY = '35864ed5'; // Replace with your OMDB API key
+const API_KEY = '35864ed5'; 
 
 export default function MovieDetailScreen({ route }) {
   const { imdbID } = route.params;

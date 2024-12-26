@@ -11,7 +11,7 @@ import {
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-const API_KEY = '35864ed5'; // Replace with your OMDB API key
+const API_KEY = '35864ed5';
 
 export default function BrowseScreen({ navigation }) {
   const [movies, setMovies] = useState([]);
@@ -19,7 +19,7 @@ export default function BrowseScreen({ navigation }) {
   const [loading, setLoading] = useState(false);
 
   const searchMovies = async (query) => {
-    // if (!query) return;
+   
     
     setLoading(true);
     try {
@@ -30,7 +30,7 @@ export default function BrowseScreen({ navigation }) {
       
       if (data.Search) {
         setMovies(data.Search);
-        // Save to search history
+        
         saveToHistory(query);
       }
     } catch (error) {
